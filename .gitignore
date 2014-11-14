@@ -1,0 +1,11 @@
+*.iml
+*.ipr
+*.iws
+*.log
+*.log.*
+.classpath
+.project
+.settings
+.gitignore~
+.DS_Store
+target
