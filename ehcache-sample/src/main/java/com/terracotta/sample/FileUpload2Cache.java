@@ -12,7 +12,7 @@ import net.sf.ehcache.Element;
 
 import org.apache.log4j.Logger;
 
-public class FileUpload2Cache {
+public class 	 {
 
 	static Logger logger = Logger.getLogger(FileUpload2Cache.class);
 

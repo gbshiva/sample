@@ -10,7 +10,7 @@
 		
 	</defaultCache>
 	<cache name="cache1" eternal="true" maxEntriesLocalHeap="5000"
-		maxBytesLocalOffHeap="100M" overflowToOffHeap="true">
+		maxBytesLocalOffHeap="100M" overflowToOffHeap="false">
 		<terracotta>
 			<nonstop immediateTimeout="false" timeoutMillis="30000">
 				<timeoutBehavior type="noop" />
