@@ -21,13 +21,23 @@ public class ReadfromCache {
 					// Connect to Terracotta
 			CacheManager cmgr = new CacheManager();
 			Cache dataStore = cmgr.getCache("cache1");
-			for (int i=1;i<5;i++){
+			for (int i=1;i<10;i++){
 				Element e = dataStore.get(""+i);
 				if (e != null){
 					logger.info("Found key= "+e.getObjectKey() +" with value= "+e.getObjectValue());
 				}
 				
 			}
+			boolean ever=true;
+			while (ever){
+				try {
+					Thread.sleep(10000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
 		
 	}
 
