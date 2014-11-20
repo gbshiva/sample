@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="true"
+	monitoring="autodetect" dynamicConfig="true" name="Ehcache-Sample">
+
+
+	<defaultCache eternal="true" maxEntriesLocalHeap="5000"
+		maxBytesLocalOffHeap="3g" overflowToOffHeap="false">
+		
+	</defaultCache>
+	<cache name="cache1" eternal="true" maxEntriesLocalHeap="5000"
+		maxBytesLocalOffHeap="100M" overflowToOffHeap="true">
+		<terracotta>
+			<nonstop immediateTimeout="false" timeoutMillis="30000">
+				<timeoutBehavior type="noop" />
+			</nonstop>
+		</terracotta>	
+	</cache>
+
+
+	<terracottaConfig url="localhost:9510" rejoin="true" />
+</ehcache>
